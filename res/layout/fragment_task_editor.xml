@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create / Edit Task"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Task Title -->
+        <EditText
+            android:id="@+id/edTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task title"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9e9e9e"
+            android:padding="14dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/ic_tasks"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/edDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9e9e9e"
+            android:padding="14dp"
+            android:background="@drawable/rounded_edittext"
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Priority -->
+        <Spinner
+            android:id="@+id/spinnerPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Due Date Text -->
+        <TextView
+            android:id="@+id/txtDue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No due date selected"
+            android:textColor="#BB86FC"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Pick Date Btn -->
+        <Button
+            android:id="@+id/btnDue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Due Date Time"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#9E7BFF"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Task Image -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Task Image"
+            android:textColor="#BB86FC"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/imgTask"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="22dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Task ✅"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:backgroundTint="#BB86FC"
+            android:padding="14dp"/>
+
+    </LinearLayout>
+</ScrollView>

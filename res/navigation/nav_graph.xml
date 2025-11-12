@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/taskListFragment">
+
+    <!-- Task list -->
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.timetracker.ui.TaskListFragment"
+        android:label="Tasks">
+
+        <action
+            android:id="@+id/action_taskListFragment_to_taskEditorFragment"
+            app:destination="@id/taskEditorFragment" />
+    </fragment>
+
+    <!-- Task editor -->
+    <fragment
+        android:id="@+id/taskEditorFragment"
+        android:name="com.example.timetracker.ui.TaskEditorFragment"
+        android:label="Add/Edit Task">
+
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="-1L" />
+
+        <action
+            android:id="@+id/action_taskEditorFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
+    </fragment>
+
+    <!-- Timer -->
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.example.timetracker.ui.TimerFragment"
+        android:label="Timer" />
+</navigation>
